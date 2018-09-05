@@ -1,0 +1,27 @@
+<html>
+<head></head>
+<body>
+  <script>
+  function playGame() {
+//Ask player one for a number between 1 and 4
+var p1= prompt("Number between 1 and 4");
+//Have the computer to choose a random number
+var computer= (Math.floor(Math.random()*4)+1);
+//Scold the players if they entered a number out side of the range then end the game.
+if ((p1<1||p1>4)|| (computer<1||computer>4)) {
+  window.alert("One of you cheated. Game over :(");
+  return;
+}
+//If the player one AND computer numbers are the same, say everyone wins.
+if (p1==computer){
+  window.alert("You both win!!!" + computer);
+}
+//ELSE tell both players what they chose, and why they are losers.
+else {
+  window.alert("You both lose. Player one chose " +p1+ " and Computer chose "+ computer);
+}
+}
+  </script>
+  <button onclick= "playGame()">Play Game</button>
+</body>
+</html>
